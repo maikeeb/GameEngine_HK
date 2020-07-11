@@ -1,4 +1,4 @@
-#include "Engine.h"
+#include "Include/Engine.h"
 
 Engine::Engine(){}
 
@@ -6,15 +6,19 @@ Engine::~Engine(){}
 
 void Engine::Update()
 {
-	sf::Event event;
-	while (window -> pollEvent(event))
+	// use _ at the beginning of a local variable
+	sf::Event _event;
+	while (window -> pollEvent(_event))
 	{
 		//"close requested" event: we close the window
-		if (event.type == sf::Event::Closed)
+		if (_event.type == sf::Event::Closed)
 		{
+			std::cout << "Closing now..." << std::endl;
 			window -> close();
 		}
 	}
+
+	world->tick(10.0f); // milliseconds inbetween ticks
 }
 
 Engine& Engine::GetInstance()
@@ -34,4 +38,12 @@ void Engine::Start(sf::RenderWindow* win)
 	{
 		Update();
 	}
+
+	
+}
+
+void Engine::AddSystem(ECS::EntitySystem* newSys)
+{
+	world->registerSystem(newSys);
+	world->enableSystem(newSys);
 }
