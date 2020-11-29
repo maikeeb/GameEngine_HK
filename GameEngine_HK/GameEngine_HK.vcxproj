@@ -144,16 +144,36 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AnimationSystem.cpp" />
+    <ClCompile Include="Button.cpp" />
+    <ClCompile Include="ButtonMap.cpp" />
     <ClCompile Include="Engine.cpp" />
+    <ClCompile Include="InputSystem.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MainCamera.cpp" />
+    <ClCompile Include="MovementSystem.cpp" />
+    <ClCompile Include="PauseMenu.cpp" />
+    <ClCompile Include="PhysicsSystem.cpp" />
     <ClCompile Include="RenderingSystem.cpp" />
+    <ClCompile Include="States.cpp" />
+    <ClCompile Include="Tile.cpp" />
+    <ClCompile Include="TileMapSystem.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\AnimationSystem.h" />
+    <ClInclude Include="include\Button.h" />
+    <ClInclude Include="include\ButtonMap.h" />
     <ClInclude Include="include\Components.h" />
     <ClInclude Include="include\ECS.h" />
     <ClInclude Include="include\Engine.h" />
+    <ClInclude Include="include\InputSystem.h" />
+    <ClInclude Include="include\MainCamera.h" />
+    <ClInclude Include="include\MovementSystem.h" />
+    <ClInclude Include="include\PauseMenu.h" />
+    <ClInclude Include="include\PhysicsSystem.h" />
     <ClInclude Include="include\RenderingSystem.h" />
+    <ClInclude Include="include\Tile.h" />
+    <ClInclude Include="include\TileMapSystem.h" />
+    <ClInclude Include="States.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
